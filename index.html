@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Citas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo-container">
+    <img src="logo.png" alt="ClinicaDental Logo">
+    <h1>Clínica Dental</h1>
+  </div>
+  <p class="tagline">Gestión de Citas - Clínica Dental</p>
+</header>
+
+<section id="menu-section">
+  <button id="btnCrear">Crear / Modificar Cita</button>
+  <button id="btnVer">Ver Mis Citas</button>
+</section>
+
+<!-- APP PRINCIPAL -->
+<section id="app-section" class="hidden app-grid">
+
+  <!-- FORMULARIO -->
+  <section id="form-section">
+    <form id="citaForm">
+      <h2>Crear / Modificar Cita</h2>
+
+      <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" id="nombre">
+        <span class="error" id="errorNombre"></span>
+      </div>
+
+      <div class="form-group">
+        <label>Apellidos</label>
+        <input type="text" id="apellidos">
+        <span class="error" id="errorApellidos"></span>
+      </div>
+
+      <div class="form-group">
+        <label>DNI</label>
+        <input type="text" id="dni">
+        <span class="error" id="errorDni"></span>
+      </div>
+
+      <div class="form-group">
+        <label>Teléfono</label>
+        <input type="text" id="telefono">
+        <span class="error" id="errorTelefono"></span>
+      </div>
+
+      <div class="form-group">
+        <label>Fecha de nacimiento</label>
+        <input type="date" id="fechaNacimiento">
+        <span class="error" id="errorFechaNacimiento"></span>
+      </div>
+
+      <div class="form-group">
+        <label>Fecha de la cita</label>
+        <input type="date" id="fechaCita">
+        <span class="error" id="errorFechaCita"></span>
+      </div>
+
+      <div class="form-group">
+        <label>Hora</label>
+        <input type="time" id="horaCita">
+        <span class="error" id="errorHoraCita"></span>
+      </div>
+
+      <div class="form-group">
+        <label>Observaciones</label>
+        <textarea id="observaciones"></textarea>
+      </div>
+
+      <input type="hidden" id="citaId">
+
+      <div class="form-buttons">
+        <button type="submit">Guardar</button>
+        <button type="button" id="btnVolverForm">Volver</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- TABLA -->
+  <section id="tabla-section">
+    <h2>Lista de Citas</h2>
+    <table id="tablaCitas">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nombre</th>
+          <th>Apellidos</th>
+          <th>DNI</th>
+          <th>Teléfono</th>
+          <th>Nacimiento</th>
+          <th>Fecha y Hora</th>
+          <th>Observaciones</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="vacio"><td colspan="9">Dato vacío</td></tr>
+      </tbody>
+    </table>
+    <button id="btnVolverTabla">Volver</button>
+  </section>
+
+</section>
+
+<footer>
+  <p>Clínica Dental - contacto@clinicadental.com - Tel: 123456789</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
